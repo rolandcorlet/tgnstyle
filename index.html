@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TGNStyle | Boutique Hair, Colour &amp; Beauty Studio — Mount Annan, NSW</title>
+  <meta name="description" content="TGNStyle by Teagan — Boutique hair styling, lived-in blonding, balayage, precision colour &amp; beauty studio in Mount Annan, NSW. Serving Camden, Narellan &amp; Macarthur." />
+  <link rel="canonical" href="https://tgnstyle.com.au/" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Local SEO Schema (Mount Annan / Macarthur Hair & Beauty Salon) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "TGNStyle",
+    "alternateName": "TGN Style by Teagan",
+    "url": "https://tgnstyle.com.au",
+    "description": "High-quality hair styling, specialist blonding & colouring, and luxury beauty treatments by Teagan in Mount Annan, NSW.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mount Annan",
+      "addressRegion": "NSW",
+      "postalCode": "2567",
+      "addressCountry": "AU"
+    },
+    "areaServed": ["Mount Annan", "Camden", "Narellan", "Harrington Park", "Gregory Hills", "Campbelltown"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-ivory: #FAF7F2;
+      --bg-sand: #F2ECE1;
+      --bg-card: #FFFFFF;
+      --text-espresso: #1E1916;
+      --text-muted: #655B53;
+      --accent-gold: #B08968;
+      --accent-gold-dark: #8D6A4B;
+      --border-soft: #E5DDD0;
+      --success-bg: #EDF6F0;
+      --success-text: #1F5E3B;
+      --error-bg: #FDF0F0;
+      --error-text: #982626;
+      --radius: 14px;
+      --shadow: 0 12px 34px rgba(30, 25, 22, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-ivory);
+      color: var(--text-espresso);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.18;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      text-decoration: none;
+      color: var(--text-espresso);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-logo .monogram {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .brand-logo .sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent-gold-dark);
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-espresso);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.65rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--text-espresso);
+      color: var(--bg-ivory);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-gold-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-espresso);
+      border: 1px solid var(--text-espresso);
+    }
+
+    .btn-outline:hover {
+      background: var(--text-espresso);
+      color: var(--bg-ivory);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5.5rem 1.5rem 4.5rem;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold-dark);
+      background: var(--bg-sand);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 4.1rem);
+      margin-bottom: 1.25rem;
+      color: var(--text-espresso);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent-gold-dark);
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #27201C 0%, #3E3129 100%);
+      color: var(--bg-ivory);
+      padding: 2.75rem 2.25rem;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "TGN";
+      position: absolute;
+      right: -10px;
+      bottom: -30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 9rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.04);
+      pointer-events: none;
+    }
+
+    .hero-card h3 {
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
+      color: #F5EBE1;
+    }
+
+    .hero-card p {
+      color: rgba(250, 247, 242, 0.8);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlights-list {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .highlights-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    section {
+      padding: 4.5rem 1.5rem;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3.6vw, 2.85rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+    }
+
+    /* Services Menu */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .service-category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .service-category-card h3 {
+      font-size: 1.6rem;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-soft);
+      color: var(--accent-gold-dark);
+    }
+
+    .service-item {
+      padding: 0.95rem 0;
+      border-bottom: 1px dashed var(--border-soft);
+    }
+
+    .service-item:last-child {
+      border-bottom: none;
+    }
+
+    .service-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .service-price {
+      color: var(--accent-gold-dark);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .service-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Forms Layout */
+    .forms-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+
+    .form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-card .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.15rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.83rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--text-espresso);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid var(--border-soft);
+      border-radius: 9px;
+      background: var(--bg-ivory);
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--text-espresso);
+      transition: border-color 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent-gold-dark);
+      background: #fff;
+    }
+
+    .checkbox-group {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0.65rem 0 1.15rem;
+      background: var(--bg-ivory);
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.86rem;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .checkbox-label input {
+      margin-top: 0.25rem;
+      accent-color: var(--accent-gold-dark);
+    }
+
+    .status-banner {
+      display: none;
+      padding: 0.9rem 1rem;
+      border-radius: 9px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .status-banner.success {
+      display: block;
+      background: var(--success-bg);
+      color: var(--success-text);
+    }
+
+    .status-banner.error {
+      display: block;
+      background: var(--error-bg);
+      color: var(--error-text);
+    }
+
+    /* Policies Section */
+    .policy-box {
+      background: var(--bg-sand);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .policy-item h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.45rem;
+      color: var(--text-espresso);
+    }
+
+    .policy-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      background: var(--text-espresso);
+      color: var(--bg-ivory);
+      padding: 3.5rem 1.5rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.4rem;
+    }
+
+    footer p {
+      color: rgba(250, 247, 242, 0.7);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .forms-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="monogram">TGNStyle</span>
+        <span class="sub">Mount Annan &bull; By Teagan</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services &amp; Pricing</a></li>
+        <li><a href="#booking">Book Appointment</a></li>
+        <li><a href="#intake">Client Intake Waiver</a></li>
+        <li><a href="#policies">Salon Policies</a></li>
+      </ul>
+      <a href="#booking" class="btn btn-primary">Book Now</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Mount Annan, NSW &bull; Hair &amp; Beauty Studio</span>
+      <h1>Bespoke Colour, Lived-In Blondes &amp; <em>Elevated Style.</em></h1>
+      <p>
+        Welcome to <strong>TGNStyle</strong> by Teagan. A boutique studio in Mount Annan dedicated to healthy, dimensional colour, precision styling, and luxury brow &amp; lash artistry across the Macarthur region.
+      </p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary">Request an Appointment</a>
+        <a href="#intake" class="btn btn-outline">Complete New Client Form</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <span class="eyebrow" style="background: rgba(255,255,255,0.12); color: #F5EBE1;">The TGN Experience</span>
+      <h3>One-on-One Luxury Attention</h3>
+      <p>Every appointment starts with an in-depth colour and hair health consultation tailored to your lifestyle, skin tone, and maintenance goals.</p>
+      <ul class="highlights-list">
+        <li><span class="dot"></span> Specialist in Lived-In Blondes, Balayage &amp; Dimensional Colour</li>
+        <li><span class="dot"></span> Bond-Building Hair Integrity Protection Included</li>
+        <li><span class="dot"></span> Precision Styling, Event Hair &amp; Signature Blow-Waves</li>
+        <li><span class="dot"></span> Brow Sculpting, Lamination &amp; Keratin Lash Lifts</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Services Menu (Loaded dynamically from Supabase) -->
+  <section id="services">
+    <div class="section-header">
+      <span class="eyebrow">Service Menu</span>
+      <h2>Curated Hair &amp; Beauty Treatments</h2>
+      <p>Transparent pricing tailored to protect the health and longevity of your hair.</p>
+    </div>
+    <div id="services-container" class="services-grid">
+      <!-- Populated dynamically via Supabase with immediate static fallback -->
+    </div>
+  </section>
+
+  <!-- Booking & Digital Client Consultation Forms -->
+  <section id="booking">
+    <div class="section-header">
+      <span class="eyebrow">Appointments &amp; Consultations</span>
+      <h2>Book Your Visit &amp; Complete Your Intake</h2>
+      <p>New clients: please submit your appointment request and complete our digital Colour History &amp; Patch Test Waiver below prior to your visit.</p>
+    </div>
+
+    <div class="forms-wrapper">
+      <!-- Form 1: Appointment Request -->
+      <div class="form-card">
+        <h3>Request an Appointment</h3>
+        <p class="subtitle">Teagan will confirm your preferred time and send your deposit link via SMS/email.</p>
+
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="b-name">Full Name *</label>
+            <input type="text" id="b-name" required placeholder="e.g. Sarah Jenkins" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="b-phone">Mobile Number *</label>
+              <input type="tel" id="b-phone" required placeholder="0400 000 000" />
+            </div>
+            <div class="form-group">
+              <label for="b-email">Email Address *</label>
+              <input type="email" id="b-email" required placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="b-service">Service Requested *</label>
+            <select id="b-service" required>
+              <option value="">Select a service...</option>
+              <option value="Lived-In Balayage & Blonde Package">Lived-In Balayage &amp; Blonde Package (From $260)</option>
+              <option value="Full Head Foils & Gloss">Full Head Foils &amp; Gloss (From $240)</option>
+              <option value="Half Head Foils & Gloss">Half Head Foils &amp; Gloss (From $185)</option>
+              <option value="All-Over Luxe Colour & Shine">All-Over Luxe Colour &amp; Shine (From $165)</option>
+              <option value="Signature Cut & Luxe Blow-Wave">Signature Cut &amp; Luxe Blow-Wave ($95)</option>
+              <option value="Event & Bridal Hair Styling">Event &amp; Bridal Hair Styling (From $120)</option>
+              <option value="Brow Sculpture, Hybrid Dye & Lamination">Brow Sculpture, Hybrid Dye &amp; Lamination ($90)</option>
+              <option value="Lash Lift & Keratin Tint">Lash Lift &amp; Keratin Tint ($95)</option>
+              <option value="Colour Consultation">15-Min Colour Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="b-date">Preferred Date</label>
+              <input type="date" id="b-date" />
+            </div>
+            <div class="form-group">
+              <label for="b-time">Preferred Time</label>
+              <select id="b-time">
+                <option value="Morning (9am - 12pm)">Morning (9am – 12pm)</option>
+                <option value="Midday (12pm - 3pm)">Midday (12pm – 3pm)</option>
+                <option value="Afternoon / Late (3pm+)">Afternoon / Late (3pm+)</option>
+                <option value="Flexible">First Available</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="b-notes">Hair Goals or Notes</label>
+            <textarea id="b-notes" rows="3" placeholder="Tell us about your current hair length, colour goals, or any questions..."></textarea>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="b-policy" required />
+              <span>I have read and agree to the <strong>TGNStyle 48-Hour Cancellation &amp; Deposit Policy</strong>.*</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;" id="booking-submit-btn">
+            Send Appointment Request
+          </button>
+          <div id="booking-status" class="status-banner"></div>
+        </form>
+      </div>
+
+      <!-- Form 2: Digital Client Consultation & Waiver -->
+      <div class="form-card" id="intake">
+        <h3>New Client Intake &amp; Colour Waiver</h3>
+        <p class="subtitle">Required before all chemical colour, blonding, lash, and brow treatments.</p>
+
+        <form id="intake-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="i-name">Full Name *</label>
+              <input type="text" id="i-name" required placeholder="Your full legal name" />
+            </div>
+            <div class="form-group">
+              <label for="i-mobile">Mobile Number *</label>
+              <input type="tel" id="i-mobile" required placeholder="0400 000 000" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="i-email">Email Address *</label>
+              <input type="email" id="i-email" required placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="i-emergency">Emergency Contact (Name &amp; Phone)</label>
+              <input type="text" id="i-emergency" placeholder="e.g. Alex - 0411 222 333" />
+            </div>
+          </div>
+
+          <label>Part A: Medical &amp; Sensitivity Check (Tick any that apply)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="i-allergy" />
+              <span>Previous reaction/irritation to hair dye, bleach, tint, lash adhesive, or wax</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="i-scalp" />
+              <span>Sensitive/broken scalp, eczema, psoriasis, or dermatitis</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="i-pregnant" />
+              <span>Currently pregnant, breastfeeding, or on medication affecting skin sensitivity</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="i-skincare" />
+              <span>Using prescription retinoids, Roaccutane, or AHA/BHA peels (for brow waxing)</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="i-medical-details">If you ticked any above, please specify:</label>
+            <input type="text" id="i-medical-details" placeholder="Optional details for Teagan..." />
+          </div>
+
+          <label>Part B: 3-Year Hair &amp; Colour History (Tick all used in last 2–3 years)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="colour_history" value="Salon Colour / Foils / Balayage" />
+              <span>Professional salon colour, foils, or balayage</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="colour_history" value="Supermarket / Box Dye" />
+              <span>Supermarket or pharmacy box dye (permanent or semi-permanent)</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="colour_history" value="Henna / Metallic Salts" />
+              <span>Henna, plant dye, or metallic salt colour-restoring products</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="colour_history" value="Keratin / Chemical Straightening" />
+              <span>Keratin smoothing, nanoplasty, or chemical straightening/perm</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="i-patch">Part C: 48-Hour Allergy Patch Test Consent *</label>
+            <select id="i-patch" required>
+              <option value="completed_48hr">I have completed (or will complete) a 48-hour patch test prior to service</option>
+              <option value="waived">I choose to waive the 48-hour patch test &amp; accept responsibility for sensitivities</option>
+            </select>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="i-disclaimer" required />
+              <span><strong>Chemical &amp; Lightening Disclaimer *:</strong> I have disclosed my full 3-year hair history honestly and understand TGNStyle is not liable for reactions caused by undisclosed box dye, henna, or metallic salts.</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="i-media" checked />
+              <span>I give permission for TGNStyle to share photos/videos of my hair transformation on social media.</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="i-signature">Digital Signature (Type Your Full Name) *</label>
+            <input type="text" id="i-signature" required placeholder="Type your full name to sign" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;" id="intake-submit-btn">
+            Submit Client Consultation &amp; Waiver
+          </button>
+          <div id="intake-status" class="status-banner"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policies Section -->
+  <section id="policies">
+    <div class="section-header">
+      <span class="eyebrow">Studio Etiquette</span>
+      <h2>Booking, Deposit &amp; Cancellation Policy</h2>
+      <p>At TGNStyle, we dedicate exclusive chair time and bespoke preparation to every client.</p>
+    </div>
+
+    <div class="policy-box">
+      <div class="policy-item">
+        <h4>1. Booking Deposits</h4>
+        <p>A 25% booking deposit ($50 minimum for colour &amp; balayage packages) secures your appointment and is deducted directly from your final bill on the day.</p>
+      </div>
+      <div class="policy-item">
+        <h4>2. 48 Hours' Notice</h4>
+        <p>Need to reschedule? Provide at least 48 hours' notice and your deposit transfers seamlessly to your new date. Less than 48 hours' notice forfeits the deposit.</p>
+      </div>
+      <div class="policy-item">
+        <h4>3. Punctuality</h4>
+        <p>Please message us if you are running behind. Arrivals more than 15 minutes late may require adjusting your service so we do not delay the next client.</p>
+      </div>
+      <div class="policy-item">
+        <h4>4. 7-Day Care Promise</h4>
+        <p>We want you to adore your hair! If you need a minor toner tweak, reach out within 7 days of your visit and we will happily look after you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h3>TGNSTYLE</h3>
+    <p>Boutique Hair Styling, Specialist Colouring &amp; Beauty Studio by Teagan</p>
+    <p style="margin-top: 0.4rem;">Mount Annan, NSW 2567 &bull; Servicing Camden, Narellan &amp; Macarthur</p>
+    <p style="margin-top: 1.5rem; font-size: 0.78rem; opacity: 0.55;">&copy; 2026 TGNStyle (tgnstyle.com.au). All rights reserved.</p>
+  </footer>
+
+  <!-- Supabase Integration Script -->
+  <script>
+    const SUPABASE_URL = 'https://rqxejhkatenyytjqpuzy.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_xFxwULhJDwjYfM_QaR7sxg_cp7bg7-U';
+
+    const FALLBACK_SERVICES = [
+      { category: 'Colour & Blonding', name: 'Lived-In Balayage & Blonde Package', description: 'Custom hand-painted balayage or foliage, bespoke root melt, gloss toner, bond builder treatment & signature blow-wave.', price_display: 'From $260' },
+      { category: 'Colour & Blonding', name: 'Full Head Foils & Gloss', description: 'Full head precision highlights or babylights, custom gloss toner, basin massage & styled finish.', price_display: 'From $240' },
+      { category: 'Colour & Blonding', name: 'Half Head Foils & Gloss', description: 'Targeted crown and hairline brightening, custom toner, treatment & signature styling.', price_display: 'From $185' },
+      { category: 'Colour & Blonding', name: 'All-Over Luxe Colour & Shine', description: 'Rich dimensional global colour from roots to ends, moisture lock treatment & blow-wave.', price_display: 'From $165' },
+      { category: 'Styling & Cutting', name: 'Signature Cut & Luxe Blow-Wave', description: 'Thorough consultation, luxury cleanse, scalp massage, precision cut & bouncy blowout or waves.', price_display: '$95' },
+      { category: 'Styling & Cutting', name: 'Event & Bridal Hair Styling', description: 'Bespoke formal up-styling, Hollywood waves, or textured event hair tailored to your occasion.', price_display: 'From $120' },
+      { category: 'Styling & Cutting', name: 'Signature Blow-Wave & Curls', description: 'Volume blowout or effortless GHD/cloud-nine waves with humidity protection.', price_display: 'From $65' },
+      { category: 'Beauty & Brows', name: 'Brow Sculpture, Hybrid Dye & Lamination', description: 'Complete brow mapping, precision wax, lamination lift & long-lasting hybrid skin stain.', price_display: '$90' },
+      { category: 'Beauty & Brows', name: 'Lash Lift & Keratin Tint', description: 'Natural lash curl enhancement with deep black keratin-infused tint for 6–8 weeks of lift.', price_display: '$95' },
+      { category: 'Beauty & Brows', name: 'Deluxe Brow Shape & Tint', description: 'Custom brow mapping, gentle wax, tweeze & custom-blended tint.', price_display: '$50' }
+    ];
+
+    function renderServices(items) {
+      const container = document.getElementById('services-container');
+      const grouped = {};
+      items.forEach(item => {
+        if (!grouped[item.category]) grouped[item.category] = [];
+        grouped[item.category].push(item);
+      });
+
+      container.innerHTML = Object.entries(grouped).map(([category, list]) => `
+        <div class="service-category-card">
+          <h3>${category}</h3>
+          ${list.map(s => `
+            <div class="service-item">
+              <div class="service-top">
+                <span>${s.name}</span>
+                <span class="service-price">${s.price_display}</span>
+              </div>
+              <p class="service-desc">${s.description || ''}</p>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+    }
+
+    async function loadServices() {
+      renderServices(FALLBACK_SERVICES);
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/tgn_services?select=*&order=sort_order.asc`, {
+          headers: {
+            'apikey': SUPABASE_KEY,
+            'Authorization': `Bearer ${SUPABASE_KEY}`
+          }
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            renderServices(data);
+          }
+        }
+      } catch (e) {
+        // Fallback already rendered
+      }
+    }
+
+    // Handle Booking Form Submission
+    document.getElementById('booking-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('booking-submit-btn');
+      const status = document.getElementById('booking-status');
+      btn.disabled = true;
+      btn.textContent = 'Sending Request...';
+      status.className = 'status-banner';
+
+      const payload = {
+        client_name: document.getElementById('b-name').value.trim(),
+        client_phone: document.getElementById('b-phone').value.trim(),
+        client_email: document.getElementById('b-email').value.trim(),
+        service_requested: document.getElementById('b-service').value,
+        preferred_date: document.getElementById('b-date').value || null,
+        preferred_time: document.getElementById('b-time').value,
+        notes: document.getElementById('b-notes').value.trim() || null,
+        policy_accepted: document.getElementById('b-policy').checked
+      };
+
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/tgn_bookings`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_KEY,
+            'Authorization': `Bearer ${SUPABASE_KEY}`,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error('Could not save booking request.');
+        status.textContent = 'Thank you! Your appointment request has been sent to Teagan at TGNStyle.';
+        status.className = 'status-banner success';
+        e.target.reset();
+      } catch (err) {
+        status.textContent = 'Unable to submit right now. Please try again in a moment.';
+        status.className = 'status-banner error';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send Appointment Request';
+      }
+    });
+
+    // Handle Digital Client Intake & Waiver Submission
+    document.getElementById('intake-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('intake-submit-btn');
+      const status = document.getElementById('intake-status');
+      btn.disabled = true;
+      btn.textContent = 'Submitting Waiver...';
+      status.className = 'status-banner';
+
+      const historyChecked = Array.from(document.querySelectorAll('input[name="colour_history"]:checked'))
+        .map(el => el.value);
+
+      const payload = {
+        full_name: document.getElementById('i-name').value.trim(),
+        mobile: document.getElementById('i-mobile').value.trim(),
+        email: document.getElementById('i-email').value.trim(),
+        emergency_contact: document.getElementById('i-emergency').value.trim() || null,
+        allergy_history: document.getElementById('i-allergy').checked,
+        scalp_sensitivity: document.getElementById('i-scalp').checked,
+        pregnant_or_medical: document.getElementById('i-pregnant').checked,
+        active_skincare: document.getElementById('i-skincare').checked,
+        medical_details: document.getElementById('i-medical-details').value.trim() || null,
+        colour_history: historyChecked,
+        patch_test_consent: document.getElementById('i-patch').value,
+        chemical_disclaimer_accepted: document.getElementById('i-disclaimer').checked,
+        media_consent: document.getElementById('i-media').checked,
+        signature_name: document.getElementById('i-signature').value.trim()
+      };
+
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/tgn_client_intakes`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_KEY,
+            'Authorization': `Bearer ${SUPABASE_KEY}`,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error('Could not save intake form.');
+        status.textContent = 'Thank you! Your Client Consultation & Waiver has been securely recorded for your appointment.';
+        status.className = 'status-banner success';
+        e.target.reset();
+      } catch (err) {
+        status.textContent = 'Unable to submit right now. Please check all required fields and try again.';
+        status.className = 'status-banner error';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit Client Consultation & Waiver';
+      }
+    });
+
+    loadServices();
+  </script>
+</body>
+</html>
