@@ -1,51 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#261F1B" />
-      <stop offset="100%" stop-color="#14100E" />
+      <stop offset="0%" stop-color="#221B17" />
+      <stop offset="100%" stop-color="#120E0C" />
     </linearGradient>
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F3E3D0" />
-      <stop offset="45%" stop-color="#C8A27E" />
-      <stop offset="100%" stop-color="#8A6548" />
+      <stop offset="0%" stop-color="#F7E7D4" />
+      <stop offset="50%" stop-color="#D4AF87" />
+      <stop offset="100%" stop-color="#9A7252" />
     </linearGradient>
   </defs>
 
-  <!-- Rounded Luxury Crest Background -->
-  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bgGrad)" />
+  <!-- Clean borderless dark espresso background -->
+  <rect x="0" y="0" width="128" height="128" rx="24" fill="url(#bgGrad)" />
 
-  <!-- Outer & Inner Brushed Gold Framing -->
-  <rect x="8" y="8" width="112" height="112" rx="24" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.9" />
-  <rect x="13" y="13" width="102" height="102" rx="20" fill="none" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.4" />
-
-  <!-- Top & Bottom Boutique Diamond Star Accents -->
-  <path d="M64 17 L66.2 22.8 L72 25 L66.2 27.2 L64 33 L61.8 27.2 L56 25 L61.8 22.8 Z" fill="url(#goldGrad)" opacity="0.9" />
-  <line x1="34" y1="25" x2="51" y2="25" stroke="url(#goldGrad)" stroke-width="1.1" opacity="0.5" />
-  <line x1="77" y1="25" x2="94" y2="25" stroke="url(#goldGrad)" stroke-width="1.1" opacity="0.5" />
-
-  <!-- Editorial Serif Monogram: T G N -->
+  <!-- Bold full-size gold TGN -->
   <text
     x="64"
-    y="78"
+    y="84"
     text-anchor="middle"
     font-family="'Cormorant Garamond', 'Didot', 'Bodoni MT', 'Times New Roman', Georgia, serif"
-    font-size="44"
+    font-size="56"
     font-weight="700"
-    letter-spacing="2"
+    letter-spacing="-1"
     fill="url(#goldGrad)"
   >TGN</text>
-
-  <!-- Subtle S T Y L E Subtitle Bar -->
-  <line x1="28" y1="92" x2="100" y2="92" stroke="url(#goldGrad)" stroke-width="1" opacity="0.45" />
-  <text
-    x="65"
-    y="105"
-    text-anchor="middle"
-    font-family="'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
-    font-size="10.5"
-    font-weight="600"
-    letter-spacing="5.5"
-    fill="#DFCBB5"
-    opacity="0.9"
-  >STYLE</text>
 </svg>
